@@ -30,3 +30,4 @@ C:\Users\452114624\Documents\atividade 11.05\obj\Debug\net8.0\refint\atividade 1
 C:\Users\452114624\Documents\atividade 11.05\obj\Debug\net8.0\atividade 11.05.pdb
 C:\Users\452114624\Documents\atividade 11.05\obj\Debug\net8.0\atividade 11.05.genruntimeconfig.cache
 C:\Users\452114624\Documents\atividade 11.05\obj\Debug\net8.0\ref\atividade 11.05.dll
+C:\Users\452114624\Documents\atividade 11.05\obj\Debug\net8.0\atividade 11.05.sourcelink.json

@@ -40,5 +40,20 @@ namespace atividade_11._05.Controllers
             return CreatedAtAction(nameof(GetTodos),
                 new { id = cliente.Id }, cliente);
         }
+
+        [HttpPut("AtualizarCliente/{id}")]
+        public ActionResult<Cliente> AtualizarCliente(int id, Cliente clienteAtualizado)
+        {
+            var cliente = clientes.FirstOrDefault(c => c.Id == id);
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+
+            cliente.Nome = clienteAtualizado.Nome;
+            cliente.Email = clienteAtualizado.Email;
+
+            return Ok(cliente);
+        }
     }
 }

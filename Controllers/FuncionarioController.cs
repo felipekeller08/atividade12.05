@@ -40,5 +40,19 @@ namespace atividade_11._05.Controllers
             return CreatedAtAction(nameof(GetTodos),
                 new { id = funcionario.Id }, funcionario);
         }
+        [HttpPut("AtualizarFuncionario/{id}")] // retornar apenas NoContent
+        public ActionResult<Funcionario> AtualizarFuncionario(int id, Funcionario funcionarioAtualizado)
+        {
+            var funcionario = funcionarios.FirstOrDefault(f => f.Id == id);
+            if (funcionario == null)
+            {
+                return NotFound();
+            }
+
+            funcionario.Nome = funcionarioAtualizado.Nome;
+            funcionario.Cargo = funcionarioAtualizado.Cargo;
+
+            return NoContent();
+        }
     }
 }

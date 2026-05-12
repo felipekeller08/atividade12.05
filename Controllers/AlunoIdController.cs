@@ -44,7 +44,20 @@ namespace atividade_11._05.Controllers
             return CreatedAtAction(nameof(GetById),
                 new { id = aluno.Id }, aluno);
         }
+
+        [HttpPut("AtualizarAluno/{id}")]
+        public ActionResult<Aluno> AtualizarAluno(int id, Aluno alunoAtualizado)
+        {
+            var aluno = alunos.FirstOrDefault(a => a.Id == id);
+            if (aluno == null)
+            {
+                return NotFound();
+            }
+
+            aluno.Nome = alunoAtualizado.Nome;
+            aluno.Email = alunoAtualizado.Email;
+
+            return NoContent();
+        }
     }
 }
-      
-
